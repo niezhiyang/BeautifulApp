@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="theme_color_secondary">#fb7299</color>
+
+    <color name="theme_color_primary">#fb7299</color>
+    <color name="theme_color_primary_dark">#fb7299</color>
+    <color name="theme_color_primary_trans">#99f0486c</color>
+    <color name="theme_color_primary_font_title">#000000</color>
+    <color name="theme_color_primary_card_bg">#fff</color>
+    <color name="theme_color_primary_window_bg">#fff</color>
+    <color name="theme_color_primary_text">#4d4d4d</color>
+    <color name="theme_color_primary_tab_bg">#fb7299</color>
+
+    <!-- theme color -->
+    <color name="pink">#fb7299</color>
+    <color name="pink_dark">#fb7299</color>
+    <color name="pink_trans">#99f0486c</color>
+    <color name="pink_text">#ccc8c8</color>
+    <color name="pink_font_title">#000000</color>
+    <color name="pink_card_bg">#fff</color>
+    <color name="pink_card_gary">#e58B8B8C</color>
+    <color name="pink_window_bg">#e58B8B8C</color>
+    <color name="pink_tab_bg">#fb7299</color>
+
+    <color name="pink_card_gary2">#44999999</color>
+    <color name="pink_card_gary3">#202020</color>
+
+    <color name="green">#000000</color>
+    <color name="green_dark">#1f201f</color>
+    <color name="green_trans">#99111211</color>
+    <color name="green_text">#787676</color>
+    <color name="green_font_title">#787676</color>
+    <color name="green_window_bg">#232323</color>
+    <color name="green_card_bg">#992b2b2b</color>
+    <color name="green__text">#787676</color>
+    <color name="green_tab_bg">#2b2d2b</color>
+
+    <color name="black_80">#222222</color>
+    <color name="black_alpha_45">#71000000</color>
+    <color name="black_alpha_60">#4f000000</color>
+    <color name="background_dark">#212121</color>
+    <color name="media_controller_bg">#99000000</color>
+    <color name="font_normal">#555555</color>
+    <color name="font_gray">#656565</color>
+
+
+
+    <color name="text_primary_color">#2d2d2d</color>
+
+    <color name="black_light">#333333</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_trans">#99ffffff</color>
+
+    <color name="gray">#bbbbbb</color>
+    <color name="gray_dark">#999999</color>
+    <color name="gray_trans">#44999999</color>
+    <color name="gray_light">#dcdcdc</color>
+
+
+
+
+    <color name="colorText">#fff</color>
+    <color name="ssxinhongse1">#ff0</color>
+    <color name="font_color">#000</color>
+    <color name="window_background">#fff</color>
+</resources>

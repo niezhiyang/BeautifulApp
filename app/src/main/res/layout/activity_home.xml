@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.nzy.beautifulapp.mvp.ui.HomeActivity">
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:id="@+id/fl_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <RadioGroup
+        android:paddingTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <com.bilibili.magicasakura.widgets.TintRadioButton
+            android:drawableTop="@drawable/wenyitab"
+            android:checked="true"
+            android:textColor="@color/selector_button"
+            android:gravity="center"
+            android:id="@+id/rb_wenyi"
+            android:text="直播"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <com.bilibili.magicasakura.widgets.TintRadioButton
+            android:drawableTop="@drawable/animtab"
+            android:textColor="@color/selector_button"
+            android:gravity="center"
+            android:id="@+id/rb_anim"
+            android:text="视频"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <com.bilibili.magicasakura.widgets.TintRadioButton
+            android:drawableTop="@drawable/gametab"
+            android:textColor="@color/selector_button"
+            android:gravity="center"
+            android:id="@+id/rb_game"
+            android:text="漫画"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+        <com.bilibili.magicasakura.widgets.TintRadioButton
+            android:drawableTop="@drawable/vediotab"
+            android:textColor="@color/selector_button"
+            android:gravity="center"
+            android:id="@+id/rb_video"
+            android:text="游戏"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </RadioGroup>
+</LinearLayout>
