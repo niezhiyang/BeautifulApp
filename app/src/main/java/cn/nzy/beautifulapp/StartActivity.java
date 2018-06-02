@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -62,6 +63,8 @@ public class StartActivity extends AppCompatActivity implements CardPickerDialog
     }
 
     private void initData() {
+        Toolbar viewById = (Toolbar) findViewById(R.id.toolbar);
+       setSupportActionBar(viewById);
         mFragments.add(new LivingFragment());
         mFragments.add( new VideoFragment());
         mFragments.add( new ImageFragment());
@@ -82,6 +85,7 @@ public class StartActivity extends AppCompatActivity implements CardPickerDialog
             @Override
             public void onTabReselect(int position) {
                 if (position == 0) {
+
                 }
             }
         });

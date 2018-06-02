@@ -51,13 +51,13 @@ public class LivingFragment extends Fragment {
         Gson gson = new Gson();
         CategoriesBean categoriesBean = gson.fromJson(data, CategoriesBean.class);
         List<CategoriesBean.DataBean> data1 = categoriesBean.getData();
-        for (int i = 0;  i < data1.size();i++) {
+        for (int i = 0; i < data1.size(); i++) {
             CategoriesBean.DataBean dataBean = data1.get(i);
             CategoryBean categoryBean = changCategoryBean(dataBean);
             infoEntities.add(categoryBean);
             mFragments.add(HomeLazyFragment.newInstance(categoryBean));
         }
-      MyPagerAdapter mAdapter = new MyPagerAdapter(getChildFragmentManager());
+        MyPagerAdapter mAdapter = new MyPagerAdapter(getChildFragmentManager());
         mVpVideo.setAdapter(mAdapter);
         mSlidingtablayout.setViewPager(mVpVideo);
         return inflate;
@@ -89,6 +89,7 @@ public class LivingFragment extends Fragment {
             return mFragments.get(position);
         }
     }
+
     private CategoryBean changCategoryBean(CategoriesBean.DataBean dataBean) {
         CategoryBean categoryBean = new CategoryBean();
         categoryBean.setName(dataBean.getName());

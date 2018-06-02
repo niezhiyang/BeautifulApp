@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:id="@+id/menu">
+        <item
+            android:id="@+id/nav_switch_night_mode"
+            android:icon="@drawable/ic_adb_white_24dp"
+            android:title="1"/>
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_adb_white_24dp"
+            android:title="2"/>
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_adb_white_24dp"
+            android:title="3"/>
+    </group>
+
+</menu>
