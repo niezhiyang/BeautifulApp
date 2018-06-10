@@ -2,7 +2,7 @@ package cn.nzy.beautifulapp.api;
 
 
 import cn.nzy.beautifulapp.Bean.LivingBean.LivingBean;
-import cn.nzy.beautifulapp.Bean.Room;
+import cn.nzy.beautifulapp.Bean.LivingBean.PlayRoom;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -30,6 +30,6 @@ public interface ApiService {
      * @return
      */
     @GET("json/rooms/{uid}/info.json")
-    Observable<Room> enterRoom(@Path("uid")String uid);
+    Observable<PlayRoom> getPlayRoom(@Path("uid")String uid);
 
 }

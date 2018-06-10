@@ -18,7 +18,6 @@ public class HomeContract {
     }
 
     public interface IHomeView extends BaseContract.IBaseView {
-        void showNetError();
         void showData(List<LivingBean.DataBean> data);
         void hideProgressBar();
         void showRecyclerView();

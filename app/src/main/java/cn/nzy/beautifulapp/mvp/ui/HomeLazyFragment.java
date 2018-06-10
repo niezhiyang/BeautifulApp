@@ -1,14 +1,22 @@
 package cn.nzy.beautifulapp.mvp.ui;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.blankj.utilcode.util.ToastUtils;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.youth.banner.Banner;
+import com.youth.banner.BannerConfig;
+import com.youth.banner.Transformer;
+import com.youth.banner.loader.ImageLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +30,7 @@ import cn.nzy.beautifulapp.base.BaseModule;
 import cn.nzy.beautifulapp.mvp.contract.HomeContract;
 import cn.nzy.beautifulapp.mvp.model.HomeMudle;
 import cn.nzy.beautifulapp.mvp.presenter.HomePresenter;
+import cn.nzy.beautifulapp.utils.GlideUtil;
 
 
 /**
@@ -29,7 +38,7 @@ import cn.nzy.beautifulapp.mvp.presenter.HomePresenter;
  * created by niezhiyang
  */
 
-public class HomeLazyFragment extends BaseLazyFragment<HomeContract.IHomeView, HomePresenter> implements HomeContract.IHomeView {
+public class HomeLazyFragment extends BaseLazyFragment<HomeContract.IHomeView, HomePresenter> implements HomeContract.IHomeView, BaseQuickAdapter.OnItemClickListener {
     private ProgressBar progressBar;
     private RecyclerView mRecyclerView;
     private CategoryBean info;
@@ -69,7 +78,7 @@ public class HomeLazyFragment extends BaseLazyFragment<HomeContract.IHomeView, H
 
     @Override
     protected View initViews(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_lazy_living, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_lazy_living, container, false);
         progressBar = (ProgressBar) rootView.findViewById(R.id.progress_bar);
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
@@ -79,10 +88,10 @@ public class HomeLazyFragment extends BaseLazyFragment<HomeContract.IHomeView, H
     @Override
     protected void initData() {
         mDataBeanList = new ArrayList<>();
-        mLivingadapter = new LivingAdapter(R.layout.item_living,mDataBeanList,this);
+        mLivingadapter = new LivingAdapter(R.layout.item_living, mDataBeanList, this);
         mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         mRecyclerView.setAdapter(mLivingadapter);
-
+        mLivingadapter.setOnItemClickListener(this);
         String category = info.getSlug();
         presenter.getNetData(category);
     }
@@ -116,7 +125,7 @@ public class HomeLazyFragment extends BaseLazyFragment<HomeContract.IHomeView, H
     }
 
     @Override
-    public void showNetError() {
+    public void showNetError(Throwable throwable) {
         ToastUtils.showShort("网络错误，请检查网络");
     }
 
@@ -155,11 +164,40 @@ public class HomeLazyFragment extends BaseLazyFragment<HomeContract.IHomeView, H
 
     @Override
     public void showBanner(List<LivingBean.BigsquareBean> bigsquareBeans) {
+        View top = getLayoutInflater().inflate(R.layout.head_view, (ViewGroup) mRecyclerView.getParent(), false);
+        Banner banner = top.findViewById(R.id.head_banner);
+        //设置banner样式
+        banner.setBannerStyle(BannerConfig.NUM_INDICATOR_TITLE);
+        //设置banner动画效果
+        banner.setBannerAnimation(Transformer.ScaleInOut);
+        //设置标题集合（当banner样式有显示title时）
+        ArrayList<String> titles = new ArrayList<>();
+        for (LivingBean.BigsquareBean bigsquareBean : bigsquareBeans ) {
+            titles.add(bigsquareBean.getTitle());
+        }
+        banner.setBannerTitles(titles);
 
+        banner.setImages(bigsquareBeans).setImageLoader(new ImageLoader() {
+            @Override
+            public void displayImage(Context context, Object path, ImageView imageView) {
+                LivingBean.BigsquareBean bean = (LivingBean.BigsquareBean) path;
+                GlideUtil.setImage(HomeLazyFragment.this, bean.getThumb(), imageView);
+            }
+        }).start();
+        mLivingadapter.addHeaderView(banner);
+        mLivingadapter.setHeaderViewAsFlow(false);
     }
 
     @Override
     public void hideBanner() {
 
+    }
+
+    @Override
+    public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+        String uid = mDataBeanList.get(position).getUid();
+        Intent intent = new Intent(getActivity(), PlayRoomActivity.class);
+        intent.putExtra("uid", uid);
+        startActivity(intent);
     }
 }

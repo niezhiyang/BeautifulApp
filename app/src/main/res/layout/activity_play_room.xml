@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bilibili.magicasakura.widgets.TintLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                    android:background="@color/theme_color_primary_window_bg"
+                                                    android:orientation="vertical">
+
+    <com.dueeeke.videoplayer.player.IjkVideoView
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+
+    <com.bilibili.magicasakura.widgets.TintRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/theme_color_primary_card_bg">
+
+        <com.bilibili.magicasakura.widgets.TintTextView
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="相关推荐"
+            android:textColor="@color/theme_color_primary_font_title"
+            android:textSize="16sp"/>
+    </com.bilibili.magicasakura.widgets.TintRelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <com.bilibili.magicasakura.widgets.TintRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.bilibili.magicasakura.widgets.TintRelativeLayout>
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+</com.bilibili.magicasakura.widgets.TintLinearLayout>

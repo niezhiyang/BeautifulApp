@@ -22,7 +22,7 @@ public class HomePresenter extends BasePresenter<HomeMudle, HomeLazyFragment> im
                     view.showRecyclerView();
                     view.hideProgressBar();
                     // 如果不等于null 证明有banner
-                    if (netData.getBigsquare() != null) {
+                    if (netData.getBigsquare() != null&&netData.getBigsquare().size()>0) {
                         view.showBanner(netData.getBigsquare());
                     } else {
                         // 证明没有banner 去掉header
@@ -34,7 +34,7 @@ public class HomePresenter extends BasePresenter<HomeMudle, HomeLazyFragment> im
 
                 @Override
                 public void onFail(Throwable throwable) {
-                    view.showNetError();
+                    view.showNetError(throwable);
                 }
             });
     };

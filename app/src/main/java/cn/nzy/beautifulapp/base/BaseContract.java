@@ -8,5 +8,6 @@ public class BaseContract {
     }
 
     public interface IBaseView {
+        void showNetError(Throwable throwable);
     }
 }

@@ -1,5 +1,6 @@
 package cn.nzy.beautifulapp.utils;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.widget.ImageView;
 
@@ -23,6 +24,13 @@ public class GlideUtil {
     public static void setImage(Fragment fragment, String url, ImageView imageView){
 
         Glide.with(fragment)
+                .load(url)
+                .apply(options)
+                .into(imageView);
+    }
+    public static void setImage(Context context, String url, ImageView imageView){
+
+        Glide.with(context)
                 .load(url)
                 .apply(options)
                 .into(imageView);
