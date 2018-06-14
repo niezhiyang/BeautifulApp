@@ -2,6 +2,8 @@ package cn.nzy.beautifulapp.api;
 
 import java.util.concurrent.TimeUnit;
 
+import cn.nzy.beautifulapp.api.Service.ImgApiService;
+import cn.nzy.beautifulapp.api.Service.LivingApiService;
 import cn.nzy.beautifulapp.constant.UrlConstant;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -14,38 +16,40 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class HttpHelper {
-    private static ApiService SERVICE;
+    //手动创建一个OkHttpClient并设置超时时间
+    public static OkHttpClient.Builder okHttpClient = new OkHttpClient.Builder()
+            // 设置超时时间
+            .connectTimeout(10000L, TimeUnit.MILLISECONDS)
+            // 设置读写时间
+            .readTimeout(10000L, TimeUnit.MILLISECONDS)
+            //设置写入超时时间
+            .writeTimeout(10000L, TimeUnit.SECONDS);
+    public static OkHttpClient build = okHttpClient.build();
+    public static Retrofit.Builder builder = new Retrofit.Builder()
+            .client(build)
+            .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create());
+    private static LivingApiService LIVINGSERVICE;
+    private static ImgApiService IMGAPISERVICE;
 
     /**
-     * 请求超时时间
+     * 获取直播的
      */
 
-    public static ApiService getDefault() {
-        if (SERVICE == null) {
-            //手动创建一个OkHttpClient并设置超时时间
-            OkHttpClient.Builder okHttpClient = new OkHttpClient.Builder()
-                    // 设置超时时间
-                    .connectTimeout(10000L, TimeUnit.MILLISECONDS)
-                    // 设置读写时间
-                    .readTimeout(10000L, TimeUnit.MILLISECONDS)
-                    //设置写入超时时间
-                    .writeTimeout(10000L, TimeUnit.SECONDS);
-
-//            // 拦截请求头 . 重新获取token 等操作
-//            okHttpClient.addInterceptor(InterceptorUtil.HeaderInterceptor());
-//            //添加日志拦截器
-//            okHttpClient.addInterceptor(InterceptorUtil.LogInterceptor());
-//            //添加日志拦截器
-//            okHttpClient.addNetworkInterceptor(new StethoInterceptor());
-
-            OkHttpClient build = okHttpClient.build();
-            SERVICE = new Retrofit.Builder()
-                    .client(build)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                    .baseUrl(UrlConstant.BASE_LIVING_URL)
-                    .build().create(ApiService.class);
+    public static LivingApiService getLivingService() {
+        if (LIVINGSERVICE == null) {
+            LIVINGSERVICE = builder.baseUrl(UrlConstant.BASE_LIVING_URL).build().create(LivingApiService.class);
         }
-        return SERVICE;
+        return LIVINGSERVICE;
+    }
+
+    /**
+     * 获取图片的
+     */
+    public static ImgApiService getImgService() {
+        if (IMGAPISERVICE == null) {
+            IMGAPISERVICE = builder.baseUrl(UrlConstant.BASE_IMG_URL).build().create(ImgApiService.class);
+        }
+        return IMGAPISERVICE;
     }
 }

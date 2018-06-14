@@ -3,7 +3,7 @@ package cn.nzy.beautifulapp.mvp.model;
 
 import android.support.v4.app.Fragment;
 
-import cn.nzy.beautifulapp.Bean.LivingBean.LivingBean;
+import cn.nzy.beautifulapp.Bean.livingBean.LivingBean;
 import cn.nzy.beautifulapp.api.BaseObserver;
 import cn.nzy.beautifulapp.api.HttpHelper;
 import cn.nzy.beautifulapp.api.RxHelper;
@@ -26,7 +26,7 @@ public class HomeMudle extends BaseModule implements HomeContract.IHomeModule {
 
     @Override
     public void getNetData(String category, final NetLisener netLisener) {
-        Observable<LivingBean> liveListResultByCategories = HttpHelper.getDefault().getLiveListResultByCategories(category);
+        Observable<LivingBean> liveListResultByCategories = HttpHelper.getLivingService().getLiveListByCategory(category);
         liveListResultByCategories.compose(RxHelper.<LivingBean>handleResult()).subscribe(new BaseObserver(netLisener));
     }
 

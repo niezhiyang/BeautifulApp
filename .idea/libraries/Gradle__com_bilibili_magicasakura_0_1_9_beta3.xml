@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.bilibili:magicasakura-0.1.9-beta3">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/magicasakura-0.1.9-beta3.aar/f6984d31f0896d171af5cd1955ef5924/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/magicasakura-0.1.9-beta3.aar/f6984d31f0896d171af5cd1955ef5924/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bilibili/magicasakura/0.1.9-beta3/b11e509fa548ec39c18e527fda9becf18e6f7935/magicasakura-0.1.9-beta3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

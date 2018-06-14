@@ -10,7 +10,7 @@ import com.dueeeke.videoplayer.player.PlayerConfig;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import cn.nzy.beautifulapp.Bean.LivingBean.PlayRoom;
+import cn.nzy.beautifulapp.Bean.livingBean.PlayRoom;
 import cn.nzy.beautifulapp.R;
 import cn.nzy.beautifulapp.base.BaseActivity;
 import cn.nzy.beautifulapp.base.BaseModule;

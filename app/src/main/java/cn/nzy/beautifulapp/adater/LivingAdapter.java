@@ -8,7 +8,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 
 import java.util.List;
 
-import cn.nzy.beautifulapp.Bean.LivingBean.LivingBean;
+import cn.nzy.beautifulapp.Bean.livingBean.LivingBean;
 import cn.nzy.beautifulapp.R;
 import cn.nzy.beautifulapp.utils.GlideUtil;
 
@@ -30,5 +30,9 @@ public class LivingAdapter extends BaseQuickAdapter<LivingBean.DataBean, BaseVie
 //      Glide.with(mContext).load(item.getUserAvatar()).crossFade().into((ImageView) helper.getView(R.id.iv));
         GlideUtil.setImage(mFragment, item.getThumb(), (ImageView)helper.getView(R.id.item_living_img));
         GlideUtil.setImage(mFragment, item.getAvatar(), (ImageView)helper.getView(R.id.item_living_avatar));
+
+
+
     }
+
 }

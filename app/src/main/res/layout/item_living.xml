@@ -7,6 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="8dp"
     app:cardElevation="5dp"
+    android:id="@+id/item_living_card"
     app:cardUseCompatPadding="true">
 
         <com.bilibili.magicasakura.widgets.TintRelativeLayout
@@ -15,6 +16,7 @@
             android:background="@color/theme_color_primary_card_bg">
 
             <ImageView
+                android:transitionName="@string/living_img"
                 android:id="@+id/item_living_img"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"

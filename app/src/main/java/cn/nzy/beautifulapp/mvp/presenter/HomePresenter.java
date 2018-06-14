@@ -1,7 +1,7 @@
 package cn.nzy.beautifulapp.mvp.presenter;
 
 
-import cn.nzy.beautifulapp.Bean.LivingBean.LivingBean;
+import cn.nzy.beautifulapp.Bean.livingBean.LivingBean;
 import cn.nzy.beautifulapp.base.BasePresenter;
 import cn.nzy.beautifulapp.mvp.NetLisener;
 import cn.nzy.beautifulapp.mvp.contract.HomeContract;

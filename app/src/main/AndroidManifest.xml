@@ -28,7 +28,9 @@
         </activity>
         <activity android:name=".mvp.ui.HomeActivity">
         </activity>
-        <activity android:name=".mvp.ui.PlayRoomActivity">
+        <activity android:name=".mvp.ui.PlayRoomActivity" android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".mvp.ui.ChannelActivity" android:theme="@style/ChannelTheme">
         </activity>
 
         <receiver android:name=".Receiver.BatteryReceiver"/>

@@ -1,4 +1,4 @@
-package cn.nzy.beautifulapp.Bean.LivingBean;
+package cn.nzy.beautifulapp.Bean.livingBean;
 
 import com.google.gson.annotations.SerializedName;
 

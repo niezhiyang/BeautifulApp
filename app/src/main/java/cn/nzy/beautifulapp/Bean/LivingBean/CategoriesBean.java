@@ -1,4 +1,4 @@
-package cn.nzy.beautifulapp.Bean.LivingBean;
+package cn.nzy.beautifulapp.Bean.livingBean;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class CategoriesBean {
         private String icon_gray;
         private String icon_image;
         private String icon_red;
-        private int id;
+        private Long id;
         private int is_default;
         private String name;
         private int screen;
@@ -67,11 +67,11 @@ public class CategoriesBean {
             this.icon_red = icon_red;
         }
 
-        public int getId() {
+        public Long getId() {
             return id;
         }
 
-        public void setId(int id) {
+        public void setId(Long id) {
             this.id = id;
         }
 

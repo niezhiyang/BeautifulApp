@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.nzy.beautifulapp.Bean.CategoryBean;
-import cn.nzy.beautifulapp.Bean.LivingBean.CategoriesBean;
+import cn.nzy.beautifulapp.Bean.livingBean.CategoriesBean;
 import cn.nzy.beautifulapp.R;
 import cn.nzy.beautifulapp.mvp.ui.HomePagerAdapter;
 
@@ -31,7 +31,7 @@ public class VideoFragment extends Fragment {
     @Override
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ViewGroup inflate = (ViewGroup) View.inflate(getActivity(), R.layout.fragment_video, null);
+        ViewGroup inflate = (ViewGroup) View.inflate(getActivity(), R.layout.fragment_living, null);
 
 //        unbinder = ButterKnife.bind(this, inflate);
 //        mFragments = new ArrayList<>();

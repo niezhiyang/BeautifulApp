@@ -60,9 +60,12 @@
 
 
 
-
     <color name="colorText">#fff</color>
     <color name="ssxinhongse1">#ff0</color>
     <color name="font_color">#000</color>
     <color name="window_background">#fff</color>
+    <color name="tip">#9c9c9c</color>
+    <color name="bg_focus">#DDDDDD</color>
+    <color name="red_500">#ef4836</color>
+    <color name="textColorPrimary">#ef4836</color>
 </resources>

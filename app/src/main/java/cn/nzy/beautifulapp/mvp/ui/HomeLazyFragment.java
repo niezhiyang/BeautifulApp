@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.nzy.beautifulapp.Bean.CategoryBean;
-import cn.nzy.beautifulapp.Bean.LivingBean.LivingBean;
+import cn.nzy.beautifulapp.Bean.livingBean.LivingBean;
 import cn.nzy.beautifulapp.R;
 import cn.nzy.beautifulapp.adater.LivingAdapter;
 import cn.nzy.beautifulapp.base.BaseLazyFragment;
@@ -52,7 +52,7 @@ public class HomeLazyFragment extends BaseLazyFragment<HomeContract.IHomeView, H
     public static HomeLazyFragment newInstance(CategoryBean categoryBean) {
         HomeLazyFragment fragment = new HomeLazyFragment();
         Bundle args = new Bundle();
-        args.putSerializable(ARG_INFO_ENTITY, categoryBean);
+        args.putParcelable(ARG_INFO_ENTITY, categoryBean);
         fragment.setArguments(args);
         if (categoryBean != null) {
             fragment.setTitle(categoryBean.getName());
@@ -72,7 +72,7 @@ public class HomeLazyFragment extends BaseLazyFragment<HomeContract.IHomeView, H
 
     @Override
     public void initVariables(Bundle bundle) {
-        info = (CategoryBean) bundle.getSerializable(ARG_INFO_ENTITY);
+        info = (CategoryBean) bundle.getParcelable(ARG_INFO_ENTITY);
 
     }
 
@@ -102,7 +102,7 @@ public class HomeLazyFragment extends BaseLazyFragment<HomeContract.IHomeView, H
 
             Bundle args = getArguments();
             if (args != null) {
-                args.putSerializable(ARG_INFO_ENTITY, info);
+                args.putParcelable(ARG_INFO_ENTITY, info);
             }
 
             if (mRecyclerView != null) {

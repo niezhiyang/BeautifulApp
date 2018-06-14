@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.bilibili.magicasakura.widgets.TintRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                      xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                      android:layout_width="match_parent"
-                                                      android:layout_height="match_parent"
-    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tl="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <cn.nzy.beautifulapp.view.MyTopTabLayout
+            android:id="@+id/slidingtablayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/theme_color_primary_tab_bg"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            tl:tl_indicator_color="#44ffffff"
+            tl:tl_indicator_margin_left="2dp"
+            tl:tl_indicator_margin_right="2dp"
+            tl:tl_indicator_style="BLOCK"/>
+        <ImageView
+            android:background="#66ffffff"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/iv_select_channel"
+            android:src="@drawable/edit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+    </RelativeLayout>
 
 
-</com.bilibili.magicasakura.widgets.TintRelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></android.support.v4.view.ViewPager>
+
+
+</LinearLayout>

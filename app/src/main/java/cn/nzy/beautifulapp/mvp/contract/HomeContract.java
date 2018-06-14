@@ -3,7 +3,7 @@ package cn.nzy.beautifulapp.mvp.contract;
 
 import java.util.List;
 
-import cn.nzy.beautifulapp.Bean.LivingBean.LivingBean;
+import cn.nzy.beautifulapp.Bean.livingBean.LivingBean;
 import cn.nzy.beautifulapp.base.BaseContract;
 import cn.nzy.beautifulapp.mvp.NetLisener;
 

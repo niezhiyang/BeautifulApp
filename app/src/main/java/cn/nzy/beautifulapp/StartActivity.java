@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.nzy.beautifulapp.Bean.TabEntity;
-import cn.nzy.beautifulapp.dialog.CardPickerDialog;
+import cn.nzy.beautifulapp.view.dialog.CardPickerDialog;
 import cn.nzy.beautifulapp.mvp.ui.fragment.ImageFragment;
 import cn.nzy.beautifulapp.mvp.ui.fragment.LivingFragment;
 import cn.nzy.beautifulapp.mvp.ui.fragment.MineFragment;

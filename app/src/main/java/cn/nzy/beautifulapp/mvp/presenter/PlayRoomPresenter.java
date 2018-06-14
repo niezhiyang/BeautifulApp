@@ -1,6 +1,6 @@
 package cn.nzy.beautifulapp.mvp.presenter;
 
-import cn.nzy.beautifulapp.Bean.LivingBean.PlayRoom;
+import cn.nzy.beautifulapp.Bean.livingBean.PlayRoom;
 import cn.nzy.beautifulapp.base.BasePresenter;
 import cn.nzy.beautifulapp.mvp.NetLisener;
 import cn.nzy.beautifulapp.mvp.contract.PlayRoomContract;
