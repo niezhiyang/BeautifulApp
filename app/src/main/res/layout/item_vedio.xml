@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <com.bilibili.magicasakura.widgets.TintRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_color_primary_card_bg">
+
+        <cn.jzvd.JZVideoPlayerStandard
+            android:id="@+id/videoplayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_img"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <com.bilibili.magicasakura.widgets.TintTextView
+                android:id="@+id/item_vedio_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="啦啦啦啦"
+                android:textColor="@color/theme_color_primary_font_title"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/item_iv_view"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_view"/>
+
+                <com.bilibili.magicasakura.widgets.TintTextView
+                    android:id="@+id/item_vedio_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/item_iv_view"
+                    android:gravity="center"
+                    android:text="10210"
+                    android:textColor="@color/theme_color_primary_text"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/item_vedio_avatar"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@mipmap/avatar"
+                    app:civ_border_color="#686464"
+                    app:civ_border_width="2dp"/>
+
+                <com.bilibili.magicasakura.widgets.TintTextView
+                    android:id="@+id/item_vedio_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:text="名字"
+                    android:textColor="@color/theme_color_primary_text"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.bilibili.magicasakura.widgets.TintRelativeLayout>
+</FrameLayout>

@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appvedio/appvedio.iml" filepath="$PROJECT_DIR$/appvedio/appvedio.iml" />
       <module fileurl="file://$PROJECT_DIR$/dafy_zhugan.iml" filepath="$PROJECT_DIR$/dafy_zhugan.iml" />
       <module fileurl="file://$PROJECT_DIR$/dkplayer-java/dkplayer-java.iml" filepath="$PROJECT_DIR$/dkplayer-java/dkplayer-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jiaozivideoplayer/jiaozivideoplayer.iml" filepath="$PROJECT_DIR$/jiaozivideoplayer/jiaozivideoplayer.iml" />
     </modules>
   </component>
 </project>

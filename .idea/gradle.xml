@@ -9,7 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/appvedio" />
             <option value="$PROJECT_DIR$/dkplayer-java" />
+            <option value="$PROJECT_DIR$/jiaozivideoplayer" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

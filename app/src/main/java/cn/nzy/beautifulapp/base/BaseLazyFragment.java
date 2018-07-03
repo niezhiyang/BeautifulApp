@@ -2,13 +2,12 @@ package cn.nzy.beautifulapp.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public abstract class BaseLazyFragment<V extends BaseContract.IBaseView,P extends BasePresenter> extends Fragment implements BaseContract.IBaseView  {
+public abstract class BaseLazyFragment<V extends BaseContract.IBaseView,P extends BasePresenter> extends BaseFragment implements BaseContract.IBaseView  {
     public String fragmentTitle;
     private boolean isFragmentVisible;
     private boolean isPrepared;

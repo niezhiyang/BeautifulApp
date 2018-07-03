@@ -1,1 +1,1 @@
-include ':app', ':dkplayer-java'
+include ':app', ':dkplayer-java', ':appvedio', ':jiaozivideoplayer'

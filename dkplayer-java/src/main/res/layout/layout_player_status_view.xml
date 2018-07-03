@@ -23,7 +23,7 @@
             android:id="@+id/status_btn"
             android:layout_width="wrap_content"
             android:layout_height="26dp"
-            android:background="@drawable/shape_player_status_view_btn"
+            android:background="@drawable/retry_bg"
             android:gravity="center"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"

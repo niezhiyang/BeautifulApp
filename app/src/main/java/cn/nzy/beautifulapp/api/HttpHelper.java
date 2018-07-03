@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import cn.nzy.beautifulapp.api.Service.ImgApiService;
 import cn.nzy.beautifulapp.api.Service.LivingApiService;
+import cn.nzy.beautifulapp.api.Service.VedioApiService;
 import cn.nzy.beautifulapp.constant.UrlConstant;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -30,6 +31,7 @@ public class HttpHelper {
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create());
     private static LivingApiService LIVINGSERVICE;
+    private static VedioApiService VEDIOAPISERVICE;
     private static ImgApiService IMGAPISERVICE;
 
     /**
@@ -44,12 +46,14 @@ public class HttpHelper {
     }
 
     /**
-     * 获取图片的
+     * 获取今日头条的
      */
-    public static ImgApiService getImgService() {
-        if (IMGAPISERVICE == null) {
-            IMGAPISERVICE = builder.baseUrl(UrlConstant.BASE_IMG_URL).build().create(ImgApiService.class);
+
+    public static VedioApiService getVedioService() {
+        if (VEDIOAPISERVICE == null) {
+            VEDIOAPISERVICE = builder.baseUrl(UrlConstant.BASE_VIDEO_URL).build().create(VedioApiService.class);
         }
-        return IMGAPISERVICE;
+        return VEDIOAPISERVICE;
     }
+
 }

@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +27,7 @@ import cn.nzy.beautifulapp.Bean.CategoryBean;
 import cn.nzy.beautifulapp.Bean.CategoryBeanDao;
 import cn.nzy.beautifulapp.MyApplication;
 import cn.nzy.beautifulapp.R;
+import cn.nzy.beautifulapp.adater.MyPagerAdapter;
 import cn.nzy.beautifulapp.mvp.ui.ChannelActivity;
 import cn.nzy.beautifulapp.mvp.ui.HomeLazyFragment;
 
@@ -58,22 +57,23 @@ public class LivingFragment extends Fragment {
         for (CategoryBean s : mIfoEntities) {
             mFragments.add(HomeLazyFragment.newInstance(s));
         }
-        mAdapter = new MyPagerAdapter(getChildFragmentManager());
+        mAdapter = new MyPagerAdapter(getChildFragmentManager(),mFragments,mIfoEntities);
         mVpVideo.setAdapter(mAdapter);
         mSlidingtablayout.setViewPager(mVpVideo);
+        mVpVideo.setOffscreenPageLimit(mFragments.size());
         EventBus.getDefault().register(this);
         return inflate;
     }
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(List<CategoryBean> infoEntities) {
-        mIfoEntities=infoEntities;
-        mFragments = new ArrayList<>();
-        for (CategoryBean s : mIfoEntities) {
-            mFragments.add(HomeLazyFragment.newInstance(s));
+         List<Fragment>  fragments = new ArrayList<>();
+        for (CategoryBean s : infoEntities) {
+            fragments.add(HomeLazyFragment.newInstance(s));
         }
-        mAdapter = new MyPagerAdapter(getChildFragmentManager());
+        mAdapter = new MyPagerAdapter(getChildFragmentManager(),fragments,infoEntities);
         mVpVideo.setAdapter(mAdapter);
         mSlidingtablayout.setViewPager(mVpVideo);
+        mVpVideo.setOffscreenPageLimit(mFragments.size());
     };
     @Override
     public void onDestroyView() {
@@ -88,26 +88,6 @@ public class LivingFragment extends Fragment {
         startActivity(intent);
     }
 
-    private class MyPagerAdapter extends FragmentPagerAdapter {
-        public MyPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public int getCount() {
-            return mIfoEntities.size();
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return mIfoEntities.get(position).getName();
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return mFragments.get(position);
-        }
-    }
 
 
 }

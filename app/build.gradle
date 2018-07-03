@@ -69,8 +69,8 @@ dependencies {
     // 解析html
     implementation 'org.jsoup:jsoup:1.11.2'
 
-    //播放视频
-    implementation 'cn.jzvd:jiaozivideoplayer:6.2.3'
+//    //播放视频
+//    implementation 'cn.jzvd:jiaozivideoplayer:6.2.3'
 
     // eventbus
     implementation 'org.greenrobot:eventbus:3.1.1'
@@ -110,7 +110,16 @@ dependencies {
     implementation project(':dkplayer-java')
 
     //数据库
-    implementation 'org.greenrobot:greendao:3.2.2' //
+    implementation 'org.greenrobot:greendao:3.2.2'
+
+    //
+
     //EventBus
-    implementation 'org.greenrobot:eventbus:3.1.1' //
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //
+
+    // 下拉刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation project(':jiaozivideoplayer')
 }
