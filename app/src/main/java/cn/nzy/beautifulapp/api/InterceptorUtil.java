@@ -19,12 +19,12 @@ public class InterceptorUtil {
             public void log(String message) {
                 try {
                     String text = URLDecoder.decode(message, "utf-8");
-                    Log.i("aaaa",text+"-----"+message);
+                    Log.i("httplog",text);
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
             }
-        }).setLevel(HttpLoggingInterceptor.Level.BODY);
+        }).setLevel(HttpLoggingInterceptor.Level.BASIC);
         //设置打印数据的级别
     }  
   

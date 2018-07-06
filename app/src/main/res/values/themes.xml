@@ -5,9 +5,15 @@
     <style name="AppTheme" parent="Theme.AppCompat">
         <!-- for library use when is in night theme-->
         <item name="themeColorSecondary">@color/theme_color_secondary</item>
+
+        <item name="colorPrimary">@color/theme_color_primary</item>
+        <item name="colorPrimaryDark">@color/theme_color_primary</item>
+        <!--<item name="android:textColorPrimary">@color/theme_color_primary_window_bg</item>-->
+        <item name="android:textColorPrimaryDisableOnly">@color/theme_color_primary</item>
         <item name="android:windowBackground">@color/window_background</item>
-        <item name="android:textColorPrimary">@color/text_primary_color</item>
+
         <item name="android:windowIsTranslucent">true</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">

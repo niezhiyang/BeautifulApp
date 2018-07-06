@@ -1,9 +1,9 @@
 package cn.nzy.beautifulapp.mvp.presenter;
 
 
-import java.util.ArrayList;
+import java.util.List;
 
-import cn.nzy.beautifulapp.Bean.VedioBean.VedioItemBean;
+import cn.nzy.beautifulapp.Bean.VedioBean.VedioBean;
 import cn.nzy.beautifulapp.base.BasePresenter;
 import cn.nzy.beautifulapp.mvp.NetLisener;
 import cn.nzy.beautifulapp.mvp.contract.VedioContract;
@@ -16,11 +16,11 @@ import cn.nzy.beautifulapp.mvp.ui.fragment.VideoFragment;
  */
 
 public class VedioPresenter extends BasePresenter<VedioMudle, VideoFragment> implements VedioContract.IVedioPresenter  {
-    public void  getVedio(String max_behot_time){
+    public void  getVedio(int page){
 
-            module.getVedio(max_behot_time, new NetLisener<ArrayList<VedioItemBean>>() {
+            module.getVedio(page, new NetLisener<List<VedioBean.ResultBean>>() {
                 @Override
-                public void onSuccess(ArrayList<VedioItemBean> vedioItemBeans) {
+                public void onSuccess(List<VedioBean.ResultBean> vedioItemBeans) {
                     view.showRecyclerView();
                     view.hideProgressBar();
                     view.showData(vedioItemBeans);

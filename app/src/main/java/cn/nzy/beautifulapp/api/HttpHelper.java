@@ -23,6 +23,8 @@ public class HttpHelper {
             .connectTimeout(10000L, TimeUnit.MILLISECONDS)
             // 设置读写时间
             .readTimeout(10000L, TimeUnit.MILLISECONDS)
+            .addInterceptor(InterceptorUtil.LogInterceptor())
+            .addInterceptor(InterceptorUtil.HeaderInterceptor())
             //设置写入超时时间
             .writeTimeout(10000L, TimeUnit.SECONDS);
     public static OkHttpClient build = okHttpClient.build();
@@ -46,7 +48,7 @@ public class HttpHelper {
     }
 
     /**
-     * 获取今日头条的
+     * 短视频
      */
 
     public static VedioApiService getVedioService() {

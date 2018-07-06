@@ -14,17 +14,16 @@
 
     <!-- theme color -->
     <color name="pink">#fb7299</color>
-    <color name="pink_dark">#fb7299</color>
-    <color name="pink_trans">#99f0486c</color>
-    <color name="pink_text">#ccc8c8</color>
-    <color name="pink_font_title">#000000</color>
-    <color name="pink_card_bg">#fff</color>
-    <color name="pink_card_gary">#e58B8B8C</color>
-    <color name="pink_window_bg">#aae2dede</color>
-    <color name="pink_tab_bg">#fb7299</color>
-
-    <color name="pink_card_gary2">#44999999</color>
-    <color name="pink_card_gary3">#202020</color>
+    <!--<color name="pink_dark">#fb7299</color>-->
+    <!--<color name="pink_trans">#99f0486c</color>-->
+    <!--<color name="pink_text">#ccc8c8</color>-->
+    <!--<color name="pink_font_title">#000000</color>-->
+    <!--<color name="pink_card_bg">#f00</color>-->
+    <!--<color name="pink_card_gary">#e58B8B8C</color>-->
+    <!--<color name="pink_window_bg">#aae2dede</color>-->
+    <!--<color name="pink_tab_bg">#fb7299</color>-->
+    <!--<color name="pink_card_gary2">#44999999</color>-->
+    <!--<color name="pink_card_gary3">#202020</color>-->
 
     <color name="green">#000000</color>
     <color name="green_dark">#1f201f</color>

@@ -19,7 +19,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.Unbinder;
 import cn.jzvd.JZVideoPlayer;
-import cn.nzy.beautifulapp.Bean.VedioBean.VedioItemBean;
+import cn.nzy.beautifulapp.Bean.VedioBean.VedioBean;
 import cn.nzy.beautifulapp.R;
 import cn.nzy.beautifulapp.adater.VedioAdapter;
 import cn.nzy.beautifulapp.base.BaseFragment;
@@ -40,7 +40,7 @@ public class VideoFragment extends BaseFragment<VedioContract.IVedioView,VedioPr
     SmartRefreshLayout mRefreshLayout;
     Unbinder unbinder;
     private VedioAdapter mVedioAdapter;
-    private List<VedioItemBean> mItemBeans;
+    private List<VedioBean.ResultBean> mItemBeans;
 
 
     @Override
@@ -96,13 +96,13 @@ public class VideoFragment extends BaseFragment<VedioContract.IVedioView,VedioPr
             }
         });
         mVedioAdapter.setOnItemClickListener(this);
-        presenter.getVedio(System.currentTimeMillis()/1000+"");
+        presenter.getVedio(1);
         setListener();
     }
 
 
     @Override
-    public void showData(List<VedioItemBean> vedioItemBeans) {
+    public void showData(List<VedioBean.ResultBean> vedioItemBeans) {
         mItemBeans.addAll(vedioItemBeans);
         mVedioAdapter.notifyDataSetChanged();
     }
@@ -137,6 +137,13 @@ public class VideoFragment extends BaseFragment<VedioContract.IVedioView,VedioPr
         if (unbinder != null) {
             unbinder.unbind();
         }
+
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        JZVideoPlayer.releaseAllVideos();
     }
 
     @Override
