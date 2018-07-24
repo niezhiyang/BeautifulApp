@@ -101,14 +101,11 @@ dependencies {
     // banner
     implementation 'com.youth.banner:banner:1.4.10'
 
-    //弹幕
-    compile 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
-    compile 'com.github.ctiao:ndkbitmap-armv7a:0.9.21'
-    compile 'com.github.ctiao:ndkbitmap-x86:0.9.21'
+
 
     //直播
     implementation project(':dkplayer-java')
-
+    implementation 'com.github.dueeeke.dkplayer:dkplayer-armv7a:2.5.2'
     //数据库
     implementation 'org.greenrobot:greendao:3.2.2'
 
@@ -121,4 +118,5 @@ dependencies {
 
     // 下拉刷新
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+//    implementation project(':jiaozivideoplayer')
 }
