@@ -1,9 +1,10 @@
 package cn.nzy.beautifulapp.api.Service;
 
 
-import cn.nzy.beautifulapp.Bean.imgBean.DynamicImgBean;
 import cn.nzy.beautifulapp.Bean.imgBean.DynamicCateGoryBean;
+import cn.nzy.beautifulapp.Bean.imgBean.DynamicImgBean;
 import cn.nzy.beautifulapp.Bean.imgBean.StaticCategoryBean;
+import cn.nzy.beautifulapp.Bean.imgBean.StaticImgBean;
 import cn.nzy.beautifulapp.Bean.livingBean.PlayRoom;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -37,9 +38,10 @@ public interface ImgApiService {
      * @param categoryid  分类id
      * @param size      要跳过的id 用于分页的
      * @return
+     * http://service.picasso.adesk.com/v1/vertical/category/4e4d610cdf714d2966000000/vertical?order=new&adult=false&first=1&limit=30
      */
     @GET("v1/vertical/category/{categoryid}?limit=30&adult=false&first=0&order=hot")
-    Observable<PlayRoom> getStaticImgByCategory(@Part("categoryid") String categoryid,@Query("skip") int  size);
+    Observable<StaticImgBean> getStaticImgByCategory(@Part("categoryid") String categoryid, @Query("skip") int  size);
 
 
 
