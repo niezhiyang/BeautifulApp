@@ -57,5 +57,15 @@ public class HttpHelper {
         }
         return VEDIOAPISERVICE;
     }
+    /**
+     * 安卓壁纸
+     */
+
+    public static ImgApiService getImgService() {
+        if (VEDIOAPISERVICE == null) {
+            VEDIOAPISERVICE = builder.baseUrl(UrlConstant.BASE_IMG_URL).build().create(VedioApiService.class);
+        }
+        return IMGAPISERVICE;
+    }
 
 }
