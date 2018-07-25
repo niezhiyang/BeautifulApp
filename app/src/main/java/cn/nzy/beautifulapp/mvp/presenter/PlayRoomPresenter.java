@@ -12,6 +12,10 @@ import cn.nzy.beautifulapp.mvp.ui.PlayRoomActivity;
  * created by niezhiyang
  */
 public class PlayRoomPresenter extends BasePresenter<PlayRoomMudle, PlayRoomActivity> implements PlayRoomContract.IPlayRoomPresenter {
+    public PlayRoomPresenter(PlayRoomActivity fragment) {
+        super(fragment);
+    }
+
     public void getNetData(String uid) {
 
         module.getNetData(uid, new NetLisener<PlayRoom>() {

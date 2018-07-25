@@ -14,6 +14,10 @@ import cn.nzy.beautifulapp.mvp.ui.HomeLazyFragment;
  */
 
 public class HomePresenter extends BasePresenter<HomeMudle, HomeLazyFragment> implements HomeContract.IHomePresenter  {
+    public HomePresenter(HomeLazyFragment fragment) {
+        super(fragment);
+    }
+
     public void  getNetData(String category){
 
             module.getNetData(category, new NetLisener<LivingBean>() {

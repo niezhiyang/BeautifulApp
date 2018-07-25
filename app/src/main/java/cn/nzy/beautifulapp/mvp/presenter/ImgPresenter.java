@@ -16,6 +16,10 @@ import cn.nzy.beautifulapp.mvp.ui.fragment.ImageFragment;
  */
 
 public class ImgPresenter extends BasePresenter<ImgMudle, ImageFragment> implements ImgContract.IImgPresenter  {
+    public ImgPresenter(ImageFragment fragment) {
+        super(fragment);
+    }
+
     public void  getImg(int page){
 
             module.getImg(page, new NetLisener<List<StaticImgBean.ResBean.VerticalBean>>() {
@@ -24,12 +28,13 @@ public class ImgPresenter extends BasePresenter<ImgMudle, ImageFragment> impleme
                     view.showRecyclerView();
                     view.hideProgressBar();
                     view.showData(imgItemList);
-
+                    view.refreshFinish();
                 }
 
                 @Override
                 public void onFail(Throwable throwable) {
                     view.showNetError(throwable);
+                    view.refreshFail();
                 }
             });
     };

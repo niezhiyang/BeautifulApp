@@ -1,8 +1,6 @@
 package cn.nzy.beautifulapp.mvp.model;
 
 
-import android.support.v7.app.AppCompatActivity;
-
 import cn.nzy.beautifulapp.Bean.livingBean.PlayRoom;
 import cn.nzy.beautifulapp.api.BaseObserver;
 import cn.nzy.beautifulapp.api.HttpHelper;
@@ -20,9 +18,6 @@ import io.reactivex.Observable;
 public class PlayRoomMudle extends BaseModule implements HomeContract.IHomeModule {
 
 
-    public PlayRoomMudle(AppCompatActivity activity) {
-        super(activity);
-    }
 
     @Override
     public void getNetData(String uid, final NetLisener netLisener) {

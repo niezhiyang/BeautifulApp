@@ -62,12 +62,12 @@ public class HomeLazyFragment extends BaseLazyFragment<HomeContract.IHomeView, H
 
     @Override
     protected HomePresenter setPresenter() {
-        return new HomePresenter();
+        return new HomePresenter(this);
     }
 
     @Override
     protected BaseModule setModule() {
-        return new HomeMudle(this);
+        return new HomeMudle();
     }
 
     @Override

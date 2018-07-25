@@ -22,7 +22,7 @@ public abstract class BaseFragment<V extends BaseContract.IBaseView, P extends B
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         presenter = setPresenter();
-        presenter.attatchWindow(setModule(), this);
+        presenter.attatchWindow(setModule());
         View view = initViews(inflater, container, savedInstanceState);
         unbinder = ButterKnife.bind(this, view);
         initData();

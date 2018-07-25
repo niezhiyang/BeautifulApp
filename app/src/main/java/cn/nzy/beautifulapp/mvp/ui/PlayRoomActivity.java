@@ -57,12 +57,12 @@ public class PlayRoomActivity extends BaseActivity<PlayRoomContract.IPlayRoomVie
 
     @Override
     protected PlayRoomPresenter setPresenter() {
-        return new PlayRoomPresenter();
+        return new PlayRoomPresenter(this);
     }
 
     @Override
     protected BaseModule setModule() {
-        return new PlayRoomMudle(this);
+        return new PlayRoomMudle();
     }
 
     @Override

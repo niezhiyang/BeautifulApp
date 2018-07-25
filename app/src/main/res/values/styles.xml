@@ -16,4 +16,14 @@
     <style name="TextAppearanceBig" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">20sp</item>
     </style>
+
+
+    <!--圆弧进度条-->
+    <declare-styleable name="TasksCompletedView">
+        <attr name="radius" format="dimension"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="circleColor" format="color"/>
+        <attr name="ringColor" format="color"/>
+        <attr name="ringBgColor" format="color"/>
+    </declare-styleable>
 </resources>

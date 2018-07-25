@@ -1,8 +1,6 @@
 package cn.nzy.beautifulapp.mvp.model;
 
 
-import android.support.v4.app.Fragment;
-
 import java.util.List;
 
 import cn.nzy.beautifulapp.Bean.imgBean.StaticImgBean;
@@ -23,13 +21,10 @@ import io.reactivex.functions.Function;
 public class ImgMudle extends BaseModule implements ImgContract.IImgModule {
 
 
-    public ImgMudle(Fragment fragment) {
-        super(fragment);
-    }
 
     @Override
     public void getImg(int skipId, final NetLisener netLisener) {
-        HttpHelper.getImgService().getStaticImgByCategory("4e4d610cdf714d2966000000", skipId)
+        HttpHelper.getImgService().getStaticImgByCategory(skipId)
                 .map(new Function<StaticImgBean, List<StaticImgBean.ResBean.VerticalBean>>() {
                     @Override
                     public List<StaticImgBean.ResBean.VerticalBean> apply(StaticImgBean staticImgBean) throws Exception {

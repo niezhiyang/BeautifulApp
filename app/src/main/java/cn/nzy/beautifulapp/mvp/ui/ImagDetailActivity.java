@@ -1,0 +1,74 @@
+package cn.nzy.beautifulapp.mvp.ui;
+
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import cn.nzy.beautifulapp.R;
+import cn.nzy.beautifulapp.utils.GlideUtil;
+import cn.nzy.beautifulapp.view.CircleProgressView;
+
+public class ImagDetailActivity extends AppCompatActivity {
+
+    @BindView(R.id.iv_imag_detail)
+    ImageView mIvImagDetail;
+    @BindView(R.id.pv_iv_detail)
+    CircleProgressView mCircleProgressView;
+    int mCurrentProgress = 0;
+    int mTotalProgress = 100;
+    private Handler mHandler= new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            Glide.with(ImagDetailActivity.this).load(mImgurl).into(mIvImagDetail);
+            Bitmap bitmap = (Bitmap) msg.obj;
+            Drawable drawable =new BitmapDrawable(bitmap);
+            RequestOptions optionsImage = new RequestOptions()
+                    .placeholder(drawable)
+                    .error(drawable)
+                    ;
+
+            Glide.with(ImagDetailActivity.this).load(mImgurl).into(mIvImagDetail);
+        }
+    };
+    private String mImgurl;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_imag_detail);
+        ButterKnife.bind(this);
+        mImgurl = getIntent().getStringExtra("imgurl");
+        Bitmap bitmap = getIntent().getParcelableExtra("bitmap");
+        Log.e("wwwww",bitmap.getRowBytes() * bitmap.getHeight()+"");
+        Message message = Message.obtain();
+        message.obj = bitmap;
+//        mHandler.sendMessageDelayed(message, 1000);
+        GlideUtil.setImageDetail(this, bitmap, mIvImagDetail);
+        new Thread(new ProgressRunable()).start();
+    }
+    class ProgressRunable implements Runnable {
+        @Override
+        public void run() {
+            while (mCurrentProgress < mTotalProgress) {
+                mCurrentProgress += 1;
+                mCircleProgressView.setProgress(mCurrentProgress);
+                try {
+                    Thread.sleep(90);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+}

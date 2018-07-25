@@ -1,8 +1,6 @@
 package cn.nzy.beautifulapp.mvp.model;
 
 
-import android.support.v4.app.Fragment;
-
 import java.util.List;
 
 import cn.nzy.beautifulapp.Bean.VedioBean.VedioBean;
@@ -38,9 +36,6 @@ public class VedioMudle extends BaseModule implements VedioContract.IVedioModule
     };
 
 
-    public VedioMudle(Fragment fragment) {
-        super(fragment);
-    }
 
     @Override
     public void getVedio(int page, final NetLisener netLisener) {

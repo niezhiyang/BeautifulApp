@@ -33,15 +33,23 @@ public interface ImgApiService {
     @GET("v1/vertical?limit=30&adult=false&first=0&order=hot")
     Observable<PlayRoom> getImgByDefault(@Part("categoryid") String categoryid,@Query("skip") String  imgId);
 
+//    /**
+//     *某个频道下的静态
+//     * @param categoryid  分类id
+//     * @param size      要跳过的id 用于分页的
+//     * @return
+//     * http://service.picasso.adesk.com/v1/vertical/category/4e4d610cdf714d2966000000/vertical?order=new&adult=false&first=1&limit=30
+//     */
+//    @GET("v1/vertical/category/{categoryid}/vertical?limit=30&adult=false&first=0&order=hot")
+//    Observable<StaticImgBean> getStaticImgByCategory(@Part("categoryid") String categoryid, @Query("skip") int  size);
     /**
-     *某个频道下的静态
-     * @param categoryid  分类id
+     *美女频道下的静态
      * @param size      要跳过的id 用于分页的
      * @return
      * http://service.picasso.adesk.com/v1/vertical/category/4e4d610cdf714d2966000000/vertical?order=new&adult=false&first=1&limit=30
      */
-    @GET("v1/vertical/category/{categoryid}?limit=30&adult=false&first=0&order=hot")
-    Observable<StaticImgBean> getStaticImgByCategory(@Part("categoryid") String categoryid, @Query("skip") int  size);
+    @GET("v1/vertical/category/4e4d610cdf714d2966000000/vertical?order=new&adult=false&first=1&limit=30")
+    Observable<StaticImgBean> getStaticImgByCategory( @Query("skip") int  size);
 
 
 
@@ -64,7 +72,7 @@ public interface ImgApiService {
      * @param size      要跳过的id 用于分页的
      * @return
      */
-    @POST("v2/vertical/vertical/imgId}/comment")
+    @POST("v2/vertical/vertical/{imgId}/comment")
     Observable<DynamicImgBean> getDynamicComment(@Part("imgId") String imgId, @Query("skip") int size);
 
     /**

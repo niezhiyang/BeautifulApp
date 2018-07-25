@@ -16,6 +16,10 @@ import cn.nzy.beautifulapp.mvp.ui.fragment.VideoFragment;
  */
 
 public class VedioPresenter extends BasePresenter<VedioMudle, VideoFragment> implements VedioContract.IVedioPresenter  {
+    public VedioPresenter(VideoFragment fragment) {
+        super(fragment);
+    }
+
     public void  getVedio(int page){
 
             module.getVedio(page, new NetLisener<List<VedioBean.ResultBean>>() {

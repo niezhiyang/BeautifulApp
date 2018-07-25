@@ -6,9 +6,13 @@ public class BasePresenter<M extends BaseModule, V extends BaseContract.IBaseVie
 
     public V view;
 
-    void attatchWindow(M m, V v) {
+    public BasePresenter(V fragment) {
+        view=fragment;
+    }
+
+
+    void attatchWindow(M m) {
         this.module = m;
-        this.view = v;
     }
 
     void detachWindow() {

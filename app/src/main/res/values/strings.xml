@@ -19,4 +19,5 @@
     <string name="finish">完成</string>
 
     <string name="living_img">living_img</string>
+    <string name="transition_name">imag_detail</string>
 </resources>

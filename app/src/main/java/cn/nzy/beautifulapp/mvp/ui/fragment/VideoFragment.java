@@ -8,10 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.scwang.smartrefresh.layout.SmartRefreshLayout;
-import com.scwang.smartrefresh.layout.api.RefreshLayout;
-import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
-import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,8 +32,6 @@ public class VideoFragment extends BaseFragment<VedioContract.IVedioView,VedioPr
 
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
-    @BindView(R.id.refreshLayout)
-    SmartRefreshLayout mRefreshLayout;
     Unbinder unbinder;
     private VedioAdapter mVedioAdapter;
     private List<VedioBean.ResultBean> mItemBeans;
@@ -45,28 +39,16 @@ public class VideoFragment extends BaseFragment<VedioContract.IVedioView,VedioPr
 
     @Override
     protected VedioPresenter setPresenter() {
-        return new VedioPresenter();
+        return new VedioPresenter(this);
     }
 
     @Override
     protected BaseModule setModule() {
-        return new VedioMudle(this);
+        return new VedioMudle();
     }
 
 
     private void setListener() {
-        mRefreshLayout.setOnRefreshListener(new OnRefreshListener() {
-            @Override
-            public void onRefresh(RefreshLayout refreshlayout) {
-                refreshlayout.finishRefresh(2000/*,false*/);//传入false表示刷新失败
-            }
-        });
-        mRefreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
-            @Override
-            public void onLoadMore(RefreshLayout refreshlayout) {
-                refreshlayout.finishLoadMore(true/*,false*/);//传入false表示加载失败
-            }
-        });
     }
 
 

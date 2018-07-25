@@ -26,7 +26,7 @@ public abstract class BaseLazyFragment<V extends BaseContract.IBaseView,P extend
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         presenter= setPresenter();
-        presenter.attatchWindow(setModule(),this);
+        presenter.attatchWindow(setModule());
         isFirstLoad = true;
         View view = initViews(inflater, container, savedInstanceState);
         isPrepared = true;

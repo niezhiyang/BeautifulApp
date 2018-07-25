@@ -13,7 +13,7 @@ public abstract class BaseActivity<V extends BaseContract.IBaseView,P extends Ba
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
             presenter= setPresenter();
-            presenter.attatchWindow(setModule(),this);
+            presenter.attatchWindow(setModule());
     }
 
     public P presenter;
