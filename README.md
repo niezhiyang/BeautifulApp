@@ -33,7 +33,7 @@
     // 解析html
     implementation 'org.jsoup:jsoup:1.11.2'
 
-//    //播放视频
+   //播放视频
     implementation 'cn.jzvd:jiaozivideoplayer:6.2.3'
 
     // eventbus
