@@ -64,7 +64,7 @@ public class VideoFragment extends BaseFragment<VedioContract.IVedioView,VedioPr
 
         mItemBeans = new ArrayList<>();
         mVedioAdapter = new VedioAdapter(R.layout.item_vedio, mItemBeans);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         mRecyclerView.setAdapter(mVedioAdapter);
         mRecyclerView.addOnChildAttachStateChangeListener(new RecyclerView.OnChildAttachStateChangeListener() {
             @Override

@@ -30,7 +30,7 @@ import cn.nzy.beautifulapp.base.BaseModule;
 import cn.nzy.beautifulapp.mvp.contract.HomeContract;
 import cn.nzy.beautifulapp.mvp.model.HomeMudle;
 import cn.nzy.beautifulapp.mvp.presenter.HomePresenter;
-import cn.nzy.beautifulapp.utils.GlideUtil;
+import cn.nzy.beautifulapp.glide.GlideUtil;
 
 
 /**

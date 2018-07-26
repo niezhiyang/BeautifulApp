@@ -10,7 +10,7 @@ import java.util.List;
 
 import cn.nzy.beautifulapp.Bean.livingBean.LivingBean;
 import cn.nzy.beautifulapp.R;
-import cn.nzy.beautifulapp.utils.GlideUtil;
+import cn.nzy.beautifulapp.glide.GlideUtil;
 
 public class LivingAdapter extends BaseQuickAdapter<LivingBean.DataBean, BaseViewHolder> {
     private Fragment mFragment;

@@ -9,7 +9,7 @@ import cn.jzvd.JZVideoPlayer;
 import cn.jzvd.JZVideoPlayerStandard;
 import cn.nzy.beautifulapp.Bean.VedioBean.VedioBean;
 import cn.nzy.beautifulapp.R;
-import cn.nzy.beautifulapp.utils.GlideUtil;
+import cn.nzy.beautifulapp.glide.GlideUtil;
 
 public class VedioAdapter extends BaseQuickAdapter<VedioBean.ResultBean, BaseViewHolder> {
     public VedioAdapter(int layoutResId, List data) {

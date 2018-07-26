@@ -12,8 +12,6 @@ import cn.nzy.beautifulapp.R;
 
 public class CircleProgressView extends View {
 
-    // 画实心圆的画笔
-    private Paint mCirclePaint;
     // 画圆环的画笔
     private Paint mRingPaint;
     // 画圆环的画笔背景色
@@ -67,11 +65,6 @@ public class CircleProgressView extends View {
 
     //初始化画笔
     private void initVariable() {
-        //内圆
-        mCirclePaint = new Paint();
-        mCirclePaint.setAntiAlias(true);
-        mCirclePaint.setColor(mCircleColor);
-        mCirclePaint.setStyle(Paint.Style.FILL);
 
         //外圆弧背景
         mRingPaintBg = new Paint();
@@ -106,8 +99,6 @@ public class CircleProgressView extends View {
         mXCenter = getWidth() / 2;
         mYCenter = getHeight() / 2;
 
-        //内圆
-//        canvas.drawCircle(mXCenter, mYCenter, mRadius, mCirclePaint);
 
         //外圆弧背景
         RectF oval1 = new RectF();

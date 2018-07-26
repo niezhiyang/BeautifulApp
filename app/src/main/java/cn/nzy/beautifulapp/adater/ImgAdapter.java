@@ -9,7 +9,7 @@ import java.util.List;
 
 import cn.nzy.beautifulapp.Bean.imgBean.StaticImgBean;
 import cn.nzy.beautifulapp.R;
-import cn.nzy.beautifulapp.utils.GlideUtil;
+import cn.nzy.beautifulapp.glide.GlideUtil;
 
 public class ImgAdapter extends BaseQuickAdapter<StaticImgBean.ResBean.VerticalBean, BaseViewHolder> {
     public ImgAdapter(int layoutResId, List data) {
