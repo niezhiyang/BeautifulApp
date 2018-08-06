@@ -1,17 +1,15 @@
 # BeautifulApp
 全民直播,使用mvp架构,并且里面有很多东西需要学习<br>
-<img src="img/Screenshot_2018_0724_102155.jpg" width="40%"/> <img src="img/Screenshot_2018_0724_102155.jpg" width="40%"/>
-<img src="img/Screenshot_2018_0724_102217.jpg" width="40%"/><img src="img/Screenshot_2018_0724_102240.jpg" width="40%"/>
-<img src="img/Screenshot_2018_0724_102300.jpg" width="40%"/> <img src="img/Screenshot_2018_0726_180020.jpg" width="40%"/>
-<img src="img/Screenshot_2018_0726_180037.jpg" width="40%"/> <img src="img/Screenshot_2018_0726_180101.jpg" width="40%"/>
-<img src="img/Screenshot_2018_0726_180116.jpg" width="40%"/> <img src="img/Screenshot_2018_0726_180355.jpg" width="40%"/>
+<img src="img/img1_a.jpg" width="40%"/> <img src="img1_b.jpg" width="40%"/>
+<img src="img/img2_a.jpg" width="40%"/><img src="img/img2_b.jpg" width="40%"/>
+<img src="img/img3_a.jpg" width="40%"/> <img src="img/img3_b.jpg" width="40%"/>
+<img src="img/img4_a.jpg" width="40%"/> <img src="img/img4_b.jpg" width="40%"/>
+<img src="img/img5_a.jpg" width="40%"/> <img src="img/img5_b.jpg" width="40%"/>
+<img src="img/img6_a.jpg" width="40%"/>
 
-
-
-
-![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0726_180410.jpg width="50%")
 ## 用到的开源项目(并不是说我每个都用到了,只是我们可以拿来参考)
- //retrofit
+ 
+    //retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
