@@ -1,16 +1,15 @@
 # BeautifulApp
 全民直播,使用mvp架构,并且里面有很多东西需要学习
-<li><img src='https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0724_102155.jpg' width=540px height=960px /></li>
-![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0724_102155.jpg height="960px" width="540px")
-![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0724_102217.jpg height="960" width="540")
-![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0724_102240.jpg height="960" width="540")
-![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0724_102300.jpg height="960" width="540")
-![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0726_180020.jpg height="960" width="540")
-![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0726_180037.jpg height="960" width="540")
-![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0726_180101.jpg height="960" width="540")
-![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0726_180116.jpg height="960" width="540")
-![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0726_180355.jpg height="960" width="540")
-![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0726_180410.jpg height="960" width="540")
+<a href="art/00.png"><img src="img/Screenshot_2018_0724_102155.jpg" width="50%"/></a> <a href="art/01.png"><img src="img/Screenshot_2018_0724_102155.jpg" width="50%"/></a>
+<a href="art/00.png"><img src="img/Screenshot_2018_0724_102217.jpg" width="50%"/></a> <a href="art/01.png"><img src="img/Screenshot_2018_0724_102240.jpg" width="50%"/></a>
+<a href="art/00.png"><img src="img/Screenshot_2018_0724_102300.jpg" width="50%"/></a> <a href="art/01.png"><img src="img/Screenshot_2018_0726_180020.jpg" width="50%"/></a>
+<a href="art/00.png"><img src="img/Screenshot_2018_0726_180037.jpg" width="50%"/></a> <a href="art/01.png"><img src="img/Screenshot_2018_0726_180101.jpg" width="50%"/></a>
+<a href="art/00.png"><img src="img/Screenshot_2018_0726_180116.jpg" width="50%"/></a> <a href="art/01.png"><img src="img/Screenshot_2018_0726_180355.jpg" width="50%"/></a>
+
+
+
+
+![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0726_180410.jpg width="50%")
 ## 用到的开源项目(并不是说我每个都用到了,只是我们可以拿来参考)
  //retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
