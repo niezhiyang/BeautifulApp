@@ -1,6 +1,7 @@
 # BeautifulApp
 全民直播,使用mvp架构,并且里面有很多东西需要学习
-![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0724_102155.jpg height="960" width="540")
+<li><img src='https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0724_102155.jpg' width=540px height=960px /></li>
+![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0724_102155.jpg height="960px" width="540px")
 ![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0724_102217.jpg height="960" width="540")
 ![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0724_102240.jpg height="960" width="540")
 ![Image text](https://github.com/niezhiyang/BeautifulApp/blob/master/img/Screenshot_2018_0724_102300.jpg height="960" width="540")
