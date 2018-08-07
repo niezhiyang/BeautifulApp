@@ -1,6 +1,6 @@
 # BeautifulApp
 全民直播,使用mvp架构,并且里面有很多东西需要学习<br>
-<img src="img/img1_a.jpg" width="40%"/><img src="img1_b.jpg" width="40%"/>
+<img src="img/img1_a.jpg" width="40%"/><img src="img/img1_b.jpg" width="40%"/>
 <img src="img/img2_a.jpg" width="40%"/><img src="img/img2_b.jpg" width="40%"/>
 <img src="img/img3_a.jpg" width="40%"/> <img src="img/img3_b.jpg" width="40%"/>
 <img src="img/img4_a.jpg" width="40%"/> <img src="img/img4_b.jpg" width="40%"/>
