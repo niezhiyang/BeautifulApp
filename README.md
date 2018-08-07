@@ -1,10 +1,10 @@
 # BeautifulApp
 全民直播,使用mvp架构,并且里面有很多东西需要学习<br>
-<img src="img/img1_a.jpg" width="40%"/> </a> <a href="art/01.png"><img src="img1_b.jpg" width="40%"/>
-<img src="img/img2_a.jpg" width="40%"/></a> <a href="art/01.png"><img src="img/img2_b.jpg" width="40%"/>
-<img src="img/img3_a.jpg" width="40%"/> </a> <a href="art/01.png"><img src="img/img3_b.jpg" width="40%"/>
-<img src="img/img4_a.jpg" width="40%"/></a> <a href="art/01.png"> <img src="img/img4_b.jpg" width="40%"/>
-<img src="img/img5_a.jpg" width="40%"/></a> <a href="art/01.png"> <img src="img/img5_b.jpg" width="40%"/>
+<img src="img/img1_a.jpg" width="40%"/><img src="img1_b.jpg" width="40%"/>
+<img src="img/img2_a.jpg" width="40%"/><img src="img/img2_b.jpg" width="40%"/>
+<img src="img/img3_a.jpg" width="40%"/> <img src="img/img3_b.jpg" width="40%"/>
+<img src="img/img4_a.jpg" width="40%"/> <img src="img/img4_b.jpg" width="40%"/>
+<img src="img/img5_a.jpg" width="40%"/> <img src="img/img5_b.jpg" width="40%"/>
 <img src="img/img6_a.jpg" width="40%"/>
 
 ## 用到的开源项目(并不是说我每个都用到了,只是我们可以拿来参考)
